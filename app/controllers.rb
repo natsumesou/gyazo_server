@@ -18,5 +18,7 @@ Nyazo.controllers  do
   #   "Hello world!"
   # end
 
+  get :index do
+  end
   
 end

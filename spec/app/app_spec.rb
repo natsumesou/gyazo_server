@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Nyazo do
   it "should be return 200" do
-    get :index
-    last_response.status.should be_ok
+    get '/'
+    last_response.ok?.should be_true
   end
 end
