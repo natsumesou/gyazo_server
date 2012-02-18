@@ -16,6 +16,7 @@ class Image
       @filename = "#{hash}.png"
       @path = File.join(IMAGE_DIR, @filename)
       FileUtils.copy(@tempfile, @path)
+      FileUtils.chmod(0664 ,@path)
       true
     else
       false
