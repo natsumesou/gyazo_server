@@ -8,7 +8,7 @@ source :rubygems
 gem 'rake'
 gem 'sinatra-flash', :require => 'sinatra/flash'
 #gem 'shared-mime-info'
-gem 'ruby-filemagic'
+gem 'ruby-filemagic', '~> 0.4.2'
 
 # Component requirements
 

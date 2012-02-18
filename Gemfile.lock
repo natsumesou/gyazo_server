@@ -83,5 +83,5 @@ DEPENDENCIES
   rack-test
   rake
   rspec
-  ruby-filemagic
+  ruby-filemagic (~> 0.4.2)
   sinatra-flash
