@@ -8,3 +8,6 @@ install:
 
 rvm:
   - 1.9.3
+
+script:
+  - bundle exec padrino rake spec
