@@ -4,3 +4,7 @@ tmp/**/*
 public/*.png
 vendor/gems/*
 !vendor/gems/cache/
+
+windows/gyazowin/*.user
+windows/gyazowinp.opensdf
+windows/gyazowinp.sdf
