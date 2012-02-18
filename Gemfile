@@ -4,6 +4,8 @@ source :rubygems
 # gem 'thin'
 # gem 'mongrel'
 
+gem 'capistrano', '~> 2.9.0'
+
 # Project requirements
 gem 'rake'
 gem 'sinatra-flash', :require => 'sinatra/flash'
