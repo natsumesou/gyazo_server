@@ -19,7 +19,7 @@ Nyazo.controllers  do
   # end
 
   get :index do
-    'welcome to nyazo (gyazo clone)'
+    'welcome to nyazo (<a href="http://gyazo.com/">gyazo</a> clone)'
   end
 
   post :upload do
