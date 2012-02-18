@@ -14,10 +14,19 @@ Bundler.require(:default, PADRINO_ENV)
 # Padrino::Logger.log_static = true
 #
 
+Padrino::Logger::Config[:production] = { :log_level => :warn, :stream => :to_file }
+Padrino::Logger::Config[:development] = { :log_level => :debug, :stream => :to_file }
+Padrino::Logger::Config[:test] = { :log_level => :debug, :stream => :stdout }
+
 ##
 # Add your before load hooks here
 #
 Padrino.before_load do
+  module NyazoEnv; end
+  unless NyazoEnv.const_defined?('app'.classify, false)
+    data = YAML.load_file(Padrino.root("config/app.yml"))[PADRINO_ENV].symbolize_keys
+    NyazoEnv.const_set('app'.classify, data)
+  end
 end
 
 ##

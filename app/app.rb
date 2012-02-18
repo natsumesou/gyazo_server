@@ -53,4 +53,5 @@ class Nyazo < Padrino::Application
   #     render 'errors/505'
   #   end
   #
+
 end

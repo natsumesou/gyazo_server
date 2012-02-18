@@ -7,9 +7,10 @@ source :rubygems
 # Project requirements
 gem 'rake'
 gem 'sinatra-flash', :require => 'sinatra/flash'
+#gem 'shared-mime-info'
+gem 'ruby-filemagic'
 
 # Component requirements
-gem 'haml'
 
 # Test requirements
 gem 'rspec', :group => "test"

@@ -19,6 +19,16 @@ Nyazo.controllers  do
   # end
 
   get :index do
+    'welcome to nyazo (gyazo clone)'
   end
-  
+
+  post :upload do
+    tempfile = params[:imagedata][:tempfile]
+    image = Image.new(tempfile)
+    if image.save
+      File.join('http://', "#{NyazoEnv::App[:host]}:#{NyazoEnv::App[:port]}", image.filename)
+    else
+      halt 403
+    end
+  end
 end
