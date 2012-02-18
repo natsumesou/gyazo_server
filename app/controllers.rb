@@ -19,7 +19,7 @@ Nyazo.controllers  do
   # end
 
   get :index do
-    'welcome to nyazo (<a href="http://gyazo.com/">gyazo</a> clone)'
+    File.read(Padrino.root('public', 'index.html'))
   end
 
   post :upload do
