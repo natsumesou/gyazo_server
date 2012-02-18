@@ -1,7 +1,11 @@
 [![Build Status](https://secure.travis-ci.org/natsumesou/gyazo_server.png)](http://travis-ci.org/natsumesou/gyazo_server)
 # Nyazo
 
-NyazoはGyazoのcloneです。
+Nyazo is clone of [Gyazo](http://gyazo.com)
+
+
+Gyazo.app from - [Gyazo/gyazo](https://github.com/gyazo/Gyazo)
+gyazowin.exe from - [tyoro/Gyazowinp](https://github.com/tyoro/Gyazowinp)
 
 - URL http://g.natsu.me
 
