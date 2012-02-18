@@ -4,8 +4,9 @@
 Nyazo is clone of [Gyazo](http://gyazo.com)
 
 
-Gyazo.app from - [Gyazo/gyazo](https://github.com/gyazo/Gyazo)
-gyazowin.exe from - [tyoro/Gyazowinp](https://github.com/tyoro/Gyazowinp)
+URL http://g.natsu.me
 
-- URL http://g.natsu.me
+- Gyazo.app from - [Gyazo/gyazo](https://github.com/gyazo/Gyazo)
+- gyazowin.exe from - [tyoro/Gyazowinp](https://github.com/tyoro/Gyazowinp)
+
 
