@@ -44,7 +44,8 @@ namespace :deploy do
     transaction do
       run "cd #{current_path}; git fetch origin; git reset --hard #{branch}"
       shared_children.map do |path|
-        run "ln -s #{shared_path}/#{path} #{current_path}/#{path}"
+        run "rm -rf #{current_path}/#{path} && \
+             ln -s #{shared_path}/#{path} #{current_path}/#{path}"
       end
       bundle.install
     end
