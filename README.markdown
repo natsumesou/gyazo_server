@@ -3,6 +3,7 @@
 
 Nyazo is clone of [Gyazo](http://gyazo.com)
 
+this is private use (not general use)
 
 URL http://g.natsu.me
 
