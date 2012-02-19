@@ -11,7 +11,6 @@ gem 'httpclient', '~> 2.2.4'
 # Project requirements
 gem 'rake'
 gem 'sinatra-flash', :require => 'sinatra/flash'
-#gem 'shared-mime-info'
 gem 'ruby-filemagic', '~> 0.4.2'
 
 # Component requirements
