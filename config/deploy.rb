@@ -26,8 +26,12 @@ set :bundle_without, [:development, :test, :local]
 namespace :deploy do
   desc "DEPLOY"
   task :default do
-    update
-    restart
+    if build.isSucceeded?
+      update
+      restart
+    else
+      puts 'last travis ci build is not succeeded. (see http://travis-ci.org/natsumesou/gyazo_server)'
+    end
   end
 
   desc "Setup a project deployment"
@@ -54,5 +58,22 @@ namespace :deploy do
   desc "restart padrino project"
   task :restart do
     run "touch #{File.join(current_path, 'tmp', 'restart.txt')}"
+  end
+
+end
+
+namespace :build do
+  require 'httpclient'
+  require 'json'
+  desc "check Build result"
+  task :isSucceeded? do
+    client = HTTPClient.new
+    build_result = client.get('http://travis-ci.org/natsumesou/gyazo_server.json')
+    build_result = JSON.parse(build_result.body)
+    if build_result['last_build_status'] == 0
+      true
+    else
+      false
+    end
   end
 end

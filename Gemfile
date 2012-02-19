@@ -4,7 +4,9 @@ source :rubygems
 # gem 'thin'
 # gem 'mongrel'
 
+# build
 gem 'capistrano', '~> 2.9.0'
+gem 'httpclient', '~> 2.2.4'
 
 # Project requirements
 gem 'rake'
