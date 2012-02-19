@@ -72,7 +72,7 @@ namespace :build do
     if build_status == 0
       true
     elsif build_status == nil
-      puts 'now building on travis ci, wait a minutes! :) (see http://travis-ci.org/natsumesou/gyazo_server)'
+      puts 'now building on travis ci, wait a minute! :) (see http://travis-ci.org/natsumesou/gyazo_server)'
       false
     else
       puts 'last travis ci build is not succeeded. (see http://travis-ci.org/natsumesou/gyazo_server)'
