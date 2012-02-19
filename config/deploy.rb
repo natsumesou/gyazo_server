@@ -29,8 +29,6 @@ namespace :deploy do
     if build.isSucceeded?
       update
       restart
-    else
-      puts 'last travis ci build is not succeeded. (see http://travis-ci.org/natsumesou/gyazo_server)'
     end
   end
 
@@ -70,9 +68,14 @@ namespace :build do
     client = HTTPClient.new
     build_result = client.get('http://travis-ci.org/natsumesou/gyazo_server.json')
     build_result = JSON.parse(build_result.body)
-    if build_result['last_build_status'] == 0
+    build_status = build_result['last_build_status']
+    if build_status == 0
       true
+    elsif build_status == nil
+      puts 'now building on travis ci, wait a minutes! :) (see http://travis-ci.org/natsumesou/gyazo_server)'
+      false
     else
+      puts 'last travis ci build is not succeeded. (see http://travis-ci.org/natsumesou/gyazo_server)'
       false
     end
   end
